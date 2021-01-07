@@ -61,6 +61,13 @@
             <p class="lead">Click button bellow to export the databases</p>
             <hr class="my-4">
             <p class="lead">
+                {% if(msg == 'Failed') %}
+                    <i> Backup Failed with error:</i> <code>{{ msg }}</code>
+
+                {% else %}
+
+                    <i>{{ msg }}</i>
+                {% endif %} <br>
               <a class="btn btn-danger btn-lg" href="/backup" role="button">Backup.</a>
             </p>
           </div>
